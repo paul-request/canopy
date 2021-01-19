@@ -1,1 +1,7 @@
-export type AlertVariant = 'generic' | 'info' | 'success' | 'warning' | 'error';
+export enum AlertVariant {
+  Generic = 'generic',
+  Info = 'info',
+  Success = 'success',
+  Warning = 'warning',
+  Error = 'error',
+}

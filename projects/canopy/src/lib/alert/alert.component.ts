@@ -20,7 +20,8 @@ export class LgAlertComponent {
 
   @Input() showIcon = true;
 
-  _variant: AlertVariant;
+  private _variant: AlertVariant;
+
   @Input()
   set variant(variant: AlertVariant) {
     if (this._variant) {
@@ -37,12 +38,12 @@ export class LgAlertComponent {
   }
 
   @HostBinding('attr.role') get role(): string {
-    if (this.variant !== 'info' && this.variant !== 'generic') {
+    if (this.variant !== AlertVariant.Info && this.variant !== AlertVariant.Generic) {
       return 'alert';
     }
   }
 
   constructor(private renderer: Renderer2, private hostElement: ElementRef) {
-    this.variant = 'generic';
+    this.variant = AlertVariant.Generic;
   }
 }
