@@ -1,7 +1,6 @@
 import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from '../documentation.json';
 import cssVars from 'css-vars-ponyfill';
-import canopyTheme from './canopy-theme';
 
 setCompodocJson(docJson);
 
@@ -21,8 +20,5 @@ export const parameters = {
       { name: 'Super Blue', value: '#0076d6' },
       { name: 'Leafy Green', value: '#028844' },
     ],
-  },
-  docs: {
-    theme: canopyTheme
   }
 };
